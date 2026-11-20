@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonface The Barber | Leos Salon Nairobi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a0a;color:#fff}
+header{background:#000;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{color:#d4af37;font-weight:bold;font-size:20px}
+nav a{color:#fff;text-decoration:none;margin-left:15px;font-size:14px}
+.hero{padding:50px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800');background-size:cover}
+.hero h1{color:#d4af37;font-size:32px;line-height:1.2}
+.hero p{margin:15px 0;color:#ddd}
+.btn{display:inline-block;background:#d4af37;color:#000;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px}
+.btn2{display:inline-block;border:1px solid #d4af37;color:#d4af37;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px}
+section{padding:30px 20px}
+h2{color:#d4af37;text-align:center;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#1a1a1a;border:1px solid #333;padding:15px;border-radius:12px;text-align:center}
+.card h3{color:#fff}
+.card b{color:#d4af37;font-size:20px}
+.card p{font-size:13px;color:#bbb;margin-top:5px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+.about{background:#1a1a1a;border-radius:12px;padding:20px;line-height:1.6;font-size:14px;color:#ddd}
+input,select{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none}
+footer{text-align:center;padding:20px;color:#888;font-size:13px}
+#chatBtn{position:fixed;bottom:20px;right:20px;background:#d4af37;color:#000;border:none;padding:14px 18px;border-radius:50px;font-weight:bold;cursor:pointer;box-shadow:0 5px 20px rgba(0,0,0,.5)}
+#chatBox{display:none;position:fixed;bottom:80px;right:20px;width:300px;max-width:90vw;background:#fff;color:#000;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+#chatHead{background:#000;color:#d4af37;padding:12px;font-weight:bold}
+#chatMsgs{height:200px;overflow:auto;padding:10px;font-size:14px}
+.msg{margin:5px 0;padding:8px 10px;border-radius:10px}
+.bot{background:#eee}
+.user{background:#d4af37;text-align:right}
+#chatInput{display:flex}
+#chatInput input{flex:1}
+#chatInput button{background:#000;color:#d4af37;border:none;padding:10px 15px}
+</style>
+</head>
+<body>
+<header><div class="logo">✂️ BONFACE THE BARBER</div><nav><a href="#services">Services</a><a href="#book">Book</a></nav></header>
+
+<div class="hero">
+<h1>Sharp Fades. Clean Lineups.<br>Real Confidence.</h1>
+<p>Precision fades at Leos Salon — Kilimani, Nairobi.<br>Walk in confident, leave looking sharp.</p>
+<a class="btn" href="https://wa.me/254700000000?text=Hi%20Bonface,%20I%20want%20to%20book%20a%20cut">Book on WhatsApp</a>
+<a class="btn2" href="#services">See Prices</a>
+<p style="font-size:13px;margin-top:10px">⭐ 4.9 • 200+ Happy Clients • Open Tue-Sun 9am-7pm</p>
+</div>
+
+<section id="services">
+<h2>SERVICES + PRICES</h2>
+<div class="grid">
+<div class="card"><h3>Classic Fade</h3><b>KES 800</b><p>Clean fade with crisp styling</p></div>
+<div class="card"><h3>Skin Fade</h3><b>KES 1,000</b><p>High skin fade, seamless blend</p></div>
+<div class="card"><h3>Lineup + Beard</h3><b>KES 700</b><p>Sharp lineup + beard shape & trim</p></div>
+<div class="card"><h3>Kids Fade</h3><b>KES 600</b><p>Kids 12 & under</p></div>
+</div>
+</section>
+
+<section>
+<h2>GALLERY — RECENT FADES</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400">
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400">
+<img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400">
+</div>
+</section>
+
+<section>
+<h2>ABOUT BONFACE</h2>
+<div class="about">I'm Bonface, resident barber at Leos Salon in Nairobi. With 6+ years experience, I specialize in clean fades, sharp lineups, and grooming that builds confidence. Your space for good cuts, good chat, and consistent results.</div>
+</section>
+
+<section id="book">
+<h2>BOOK NOW</h2>
+<div class="about" style="text-align:center">
+<p>Pick your cut — we will confirm on WhatsApp</p>
+<select id="cut"><option>Classic Fade - KES 800</option><option>Skin Fade - KES 1000</option><option>Lineup + Beard - KES 700</option><option>Kids Fade - KES 600</option></select>
+<input type="date" id="date"><input type="text" id="name" placeholder="Your Name">
+<button class="btn" onclick="bookNow()" style="border:none;width:100%">Book on WhatsApp →</button>
+<p style="font-size:12px;margin-top:10px">Leos Salon • Rhapta Rd, Kilimani • Walk-ins welcome Tue-Sun 9am-7pm</p>
+</div>
+</section>
+
+<footer>© 2026 Bonface The Barber • Leos Salon, Nairobi<br>@bonface_thebarber</footer>
+
+<button id="chatBtn" onclick="toggleChat()">💬 Chat with Leo</button>
+<div id="chatBox">
+<div id="chatHead">Leo — Bonface's Assistant • Online 24/7</div>
+<div id="chatMsgs"><div class="msg bot">Hi! I'm Leo 👋 Ask me about Prices, Booking, or Location</div></div>
+<div id="chatInput"><input id="chatText" placeholder="Type price, book, location..."><button onclick="sendChat()">Send</button></div>
+</div>
+
+<script>
+function toggleChat(){var b=document.getElementById('chatBox');b.style.display=b.style.display==='block'?'none':'block'}
+function addMsg(t,c){var d=document.createElement('div');d.className='msg '+c;d.innerText=t;document.getElementById('chatMsgs').appendChild(d)}
+function sendChat(){
+var v=document.getElementById('chatText').value.toLowerCase();if(!v)return;
+addMsg(document.getElementById('chatText').value,'user');
+document.getElementById('chatText').value='';
+setTimeout(()=>{
+if(v.includes('price')||v.includes('much')||v.includes('cost')) addMsg('Classic Fade KES 800, Skin Fade KES 1000, Lineup+Beard KES 700, Kids KES 600. Want me to book you?','bot');
+else if(v.includes('book')) addMsg('Great! Pick your cut above in Book Now, then tap Book on WhatsApp. I will send it to Bonface.','bot');
+else if(v.includes('location')||v.includes('where')) addMsg('Leos Salon, Rhapta Rd, Kilimani, Nairobi. Open Tue-Sun 9am-7pm.','bot');
+else if(v.includes('open')||v.includes('time')) addMsg('Open Tue-Sun 9am-7pm. Closed Monday.','bot');
+else addMsg('I can help with Prices, Booking, or Location. Type one of those!','bot');
+},500);
+}
+function bookNow(){
+var cut=document.getElementById('cut').value;var date=document.getElementById('date').value;var name=document.getElementById('name').value||'Customer';
+var msg='Hi Bonface, I am '+name+'. I want to book: '+cut+' on '+date+'. Please confirm.';
+window.open('https://wa.me/254700000000?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+  </html>
